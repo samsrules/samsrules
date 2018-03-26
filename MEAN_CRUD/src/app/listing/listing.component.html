@@ -1,0 +1,26 @@
+
+ <label class="alert alert-danger" *ngIf="error">{{error}}</label> 
+ <h3 class="text-center">listing data</h3>
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>S.No</th>
+        <th>Email</th>
+        <th>Pass</th>
+      </tr>
+    </thead>
+    <tbody>
+	   <tr *ngFor="let val of catData;let i=index">
+		<td>{{i+1}}</td>
+		<td>{{val.email}}</td>
+		<td>{{val.pass}}</td>
+		
+		<td><a href="/update/{{val._id}}" > Edit</a> || <a href="javascript:void" (click)="delCat(val._id)"> Del</a></td>
+	  </tr>
+	  
+    </tbody>
+  </table>
+ 
+  
+  

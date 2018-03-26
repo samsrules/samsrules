@@ -1,0 +1,44 @@
+
+<header class="jumbotron">
+  <!--<h1 class="text-center">Admin Panel</h1>-->
+ </header>
+ <section class="container">
+   <label class="alert alert-danger" *ngIf="error">{{error}}</label>
+   <p>
+     <a routerLink="/create" class="btn btn-info" role="button" (click)="insert()">Create data</a>
+     <a routerLink="/update" class="btn btn-success" role="button" (click)="List()">Update data</a>
+     <a routerLink="/listing" class="btn btn-warning" role="button" (click)="List()">Listing</a>
+     <a routerLink="/delete" class="btn btn-danger" role="button" (click)="List()">File Upload</a>
+	 <a routerLink="/userpanel" class="btn btn-black" role="button" (click)="List()">user panel</a>
+  </p>
+  
+
+   <router-outlet></router-outlet>
+
+   <!--<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+    </tbody>
+  </table>-->
+ </section>
